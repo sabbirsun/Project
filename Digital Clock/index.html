@@ -6,22 +6,44 @@
     <title>Digital Watch</title>
     <style>
        body {
-        background-color: #f1f1f2;
+            background-color: #2c3e50;
+            color: #ecf0f1;
         }
 
         .MyWatch {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: aliceblue;
-        padding: 10vw;
-        border-radius: 5px;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #3498db;
+            padding: 10vw;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            text-align: center;
         }
-        span{
-             font-size: 50px;
-         }
+
+        .MyWatch .H {
+            font-size: 50px;
+            display: block;
+            color: #e74c3c; /* Hour color: Red */
+        }
+
+        .MyWatch .M {
+            font-size: 50px;
+            display: block;
+            color: #2ecc71; /* Minute color: Green */
+        }
+
+        .MyWatch .S {
+            font-size: 50px;
+            display: block;
+            color: #f39c12; /* Second color: Yellow */
+        }
+
+        .MyWatch .date {
+            font-size: 24px;
+            color: #ecf0f1; /* Date color: White */
+        }
     </style>
 </head>
 <body>
@@ -58,9 +80,7 @@
             let day = myDate.getDate();
 
             let currentDate = myDay[myDate.getDay()] + "," + myMonth[myDate.getMonth()] + " " + day;
-
-
-
+            
 
             document.getElementsByClassName("date")[0].innerHTML = currentDate;
         }
