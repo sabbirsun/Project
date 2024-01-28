@@ -23,7 +23,7 @@ body{
     align-items: center;
     flex-direction: column;
 }
-.AppBody:hover{
+.AppBody.active{
     border: 3px solid rgb(60, 209, 15);
 }
 .icon{
